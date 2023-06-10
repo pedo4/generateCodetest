@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Logo del negozio</h1>
+  </header>
+
+  <nav>
+    <ul class="categories">
+      {% for category in categorie %}
+      <li><a href="#">{{ category }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <main>
+    <h2>{{ numero_di_prodotti }}</h2>
+    <p>{{ descrizione }}</p>
+
+    <section class="products">
+      {% for product in prodotti %}
+      <div class="product">
+        <img src="product.jpg" alt="Product Image">
+        <h3>{{ product }}</h3>
+        <p>Prezzo: $19.99</p>
+        <button>Add to Cart</button>
+      </div>
+      {% endfor %}
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 E-commerce Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
